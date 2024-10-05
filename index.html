@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Electrical Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #lab-area {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            position: relative;
+        }
+        .component {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <h1>Virtual Electrical Lab</h1>
+    <p>Drag and drop the components onto the lab area and connect them.</p>
+
+    <div id="lab-area"></div>
+
+    <!-- Sample Components -->
+    <div id="battery" class="component" draggable="true">Battery</div>
+    <div id="resistor" class="component" draggable="true">Resistor</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
