@@ -1,14 +1,6 @@
 let components = [];
 let dragging = null;
 let currentComponent = null;
-document.getElementById('measureButton').addEventListener('click', () => {
-  const voltage = 9;  // Simulating a 9V battery
-  const resistance = 100;  // Simulating a 100 Ohm resistor
-  const current = voltage / resistance;
-  
-  document.getElementById('output').innerText = `Voltage: ${voltage}V, Current: ${current}A`;
-});
-
 function setup() {
   createCanvas(800, 600);
   // Add a battery component
