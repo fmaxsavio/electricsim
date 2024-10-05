@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#circuitCanvas {
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+#controls {
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px;
+}
