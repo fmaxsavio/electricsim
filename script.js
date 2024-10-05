@@ -2,6 +2,11 @@
 const labArea = document.getElementById("lab-area");
 const battery = document.getElementById("battery");
 const resistor = document.getElementById("resistor");
+// Example: Calculate current for a 9V battery and 100 Ohm resistor
+let voltage = 9; // Volts
+let resistance = 100; // Ohms
+let current = calculateOhmsLaw(voltage, resistance);
+console.log("Current: " + current + " A");  // Output: Current: 0.09 A
 
 let draggedElement = null;
 
@@ -38,4 +43,8 @@ function drop(e) {
     draggedElement.style.top = y + 'px';
     
     labArea.appendChild(draggedElement);
+}
+function calculateOhmsLaw(voltage, resistance) {
+    const current = voltage / resistance;
+    return current;
 }
