@@ -3,41 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Electrical Lab</title>
+    <title>Electrical Virtual Lab</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        canvas {
+            border: 1px solid black;
+            margin: 20px;
         }
-        #lab-area {
-            width: 80%;
-            height: 500px;
-            border: 1px solid #000;
-            margin: 20px auto;
-            position: relative;
+        .control-panel {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
         }
         .component {
-            width: 100px;
-            height: 50px;
-            background-color: lightblue;
-            text-align: center;
-            line-height: 50px;
-            position: absolute;
-            cursor: grab;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-right: 10px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
-    <h1>Virtual Electrical Lab</h1>
-    <p>Drag and drop the components onto the lab area and connect them.</p>
+    <div class="control-panel">
+        <div class="component" draggable="true" id="resistor">Resistor</div>
+        <div class="component" draggable="true" id="voltageSource">Voltage Source</div>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
 
-    <div id="lab-area"></div>
-
-    <!-- Sample Components -->
-    <div id="battery" class="component" draggable="true">Battery</div>
-    <div id="resistor" class="component" draggable="true">Resistor</div>
-
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
